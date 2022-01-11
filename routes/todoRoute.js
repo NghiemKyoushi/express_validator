@@ -5,8 +5,11 @@ const todoController = require("../controllers/todoController");
 
 router.post('/addTodo', todoController.addTodo);
 
-router.put('/updateTodo/', todoController.updateTodo);
+router.put('/updateTodo', todoController.updateTodo);
 
-router.get('/delete/:id', todoController.deleteTodo);
+router.post('/delete', todoController.deleteTodo);
 
+router.get('/findAll', todoController.getAllTodo);
+
+router.put('/checkComplete', todoController.isCompleted);
 module.exports = router;

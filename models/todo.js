@@ -6,6 +6,10 @@ const TodoSchema = new Schema({
         type: String,
         unique: true,
         required: true
+    },
+    complete: {
+        type: Boolean,
+        required: true
     }
 });
 
